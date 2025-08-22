@@ -251,7 +251,7 @@ useEffect(() => {
   };
 
   fetchMetadata();
-}, [urisData]);
+}, [urisData, ownedTokenIds]);
 
   return (
     <main style={styles.main}>
@@ -306,7 +306,7 @@ useEffect(() => {
                   </div>
                 )}
                 {!isLoadingPets && myPets.length === 0 && (
-                  <p>You don't own any SogniPets yet. Go create one!</p>
+                  <p>You don&apos;t own any SogniPets yet. Go create one!</p>
                 )}
               </div>
             )}
