@@ -100,7 +100,7 @@ const { data: isPremium, status: premiumStatus, refetch: refetchPremiumStatus } 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         // Send the selected modelId along with the prompt
-        body: JSON.stringify({ prompt, modelId: selectedModel }),
+        body: JSON.stringify({ prompt, modelId: selectedModel, userAddress: address }),
       });
       
       if (!response.ok) {
@@ -251,7 +251,7 @@ useEffect(() => {
   };
 
   fetchMetadata();
-}, [urisData, ownedTokenIds]);
+}, [urisData]);
 
   return (
     <main style={styles.main}>
@@ -306,7 +306,7 @@ useEffect(() => {
                   </div>
                 )}
                 {!isLoadingPets && myPets.length === 0 && (
-                  <p>You do not own any SogniPets yet. Go create one!</p>
+                  <p style={{ color: '#333' }}>You do not own any SogniPets yet. Go create one!</p>
                 )}
               </div>
             )}
