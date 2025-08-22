@@ -306,7 +306,7 @@ useEffect(() => {
                   </div>
                 )}
                 {!isLoadingPets && myPets.length === 0 && (
-                  <p>You don&apos;t own any SogniPets yet. Go create one!</p>
+                  <p>You do not own any SogniPets yet. Go create one!</p>
                 )}
               </div>
             )}
